@@ -48,6 +48,7 @@ var Cfg struct {
 		BuildDelay       int              `toml:"build_delay"`
 		InterruptTimeout int              `toml:"interrupt_timout"`
 		GracefulKill     bool             `toml:"graceful_kill"`
+		DebugLogging     bool             `toml:"debug_logging"`
 		Cmds             [][]string       `toml:"cmds"`
 	} `toml:"run"`
 	Sync struct {

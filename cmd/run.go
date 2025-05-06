@@ -325,7 +325,9 @@ func runRun(ctx *cli.Context) error {
 			p = strings.Replace(p, setting.WorkDir, "\033[47;30m$WORKDIR\033[0m", 1)
 			p = strings.Replace(p, "$WORKDIR", "\033[47;30m$WORKDIR\033[0m", 1)
 		}
-		fmt.Printf("-> %s\n", p)
+		if setting.Cfg.Run.DebugLogging {
+			fmt.Printf("-> %s\n", p)
+		}
 	}
 	select {}
 	return nil
